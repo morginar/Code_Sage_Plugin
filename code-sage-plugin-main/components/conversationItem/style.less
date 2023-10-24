@@ -1,0 +1,56 @@
+.headerContainer() {
+  .header {
+    display: flex;
+    align-items: center;
+    .icon {
+      background: #326bbf;
+      border-radius: 2px;
+      margin-top: 3px;
+      padding: 4px 4px 1px 4px;
+    }
+    .title {
+      margin-left: 8px;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+
+.conversationItem {
+  .question {
+    padding: 10px;
+    color: #ffffff;
+    .headerContainer();
+
+    .content {
+      margin: 4px 0px 0px 32px;
+
+      .ellipsis:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: ellipsis 2s infinite;
+        content: '\2026'; /* ascii code for the ellipsis character */
+      }
+      @keyframes ellipsis {
+        from {
+          width: 2px;
+        }
+        to {
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .answer {
+    background: #326bbf33;
+    padding: 10px;
+    color: #ffffff;
+    .headerContainer();
+
+    .content {
+      margin: 4px 0px 0px 32px;
+    }
+  }
+}

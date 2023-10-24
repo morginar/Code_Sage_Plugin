@@ -1,0 +1,76 @@
+.headerContainer() {
+  .header {
+    display: flex;
+    align-items: center;
+    .icon {
+      background: #326bbf;
+      border-radius: 2px;
+      margin-top: 3px;
+      padding: 4px 4px 1px 4px;
+    }
+    .title {
+      margin-left: 8px;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+
+.openAIControls {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .chatGPT {
+    background: #393a3b;
+    padding: 10px;
+    color: #ffffff;
+    .headerContainer();
+
+    .content {
+      margin: 4px 0px 0px 32px;
+
+      .buttonBox {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .itemButton {
+          width: 50%;
+          padding: 8px 8px 0px 0px;
+          .chatGPTButton {
+            width: 100%;
+          }
+        }
+      }
+
+      .copywriter {
+        display: flex;
+        margin-top: 10px;
+        color: #ffffff;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 12px;
+          transform: scale(0.9);
+        }
+      }
+
+      .buttonContainer {
+        .itemButton {
+          width: 100%;
+          .chatGPTButton {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .conversation {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
